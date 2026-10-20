@@ -45,7 +45,7 @@ Config Config::load() {
     c.MONGO_DB_URI = get("MONGO_DB_URI", get("MONGO_URL", get("MONGO_DB_URL")));
     c.LOGGER_ID = geti("LOGGER_ID", 0);
     c.OWNER_ID = geti("OWNER_ID", 0);
-    c.DURATION_LIMIT = static_cast<int>(geti("DURATION_LIMIT", 60) * 60);
+    c.DURATION_LIMIT = static_cast<int>(geti("DURATION_LIMIT", 400) * 60);
     c.QUEUE_LIMIT = static_cast<int>(geti("QUEUE_LIMIT", 20));
     c.PLAYLIST_LIMIT = static_cast<int>(geti("PLAYLIST_LIMIT", 20));
     for (const char* k : {"SESSION", "STRING_SESSION", "STRING_SESSIONS", "SESSION2", "SESSION3"})
@@ -63,7 +63,7 @@ Config Config::load() {
     c.AUTO_LEAVE = getb("AUTO_LEAVE", false);
     c.AUTO_END = getb("AUTO_END", false);
     c.YTDLP_UPDATE = getb("YTDLP_UPDATE", true);
-    c.THUMB_GEN = getb("THUMB_GEN", true);
+    c.THUMB_GEN = getb("THUMB_GEN", false);
     c.VIDEO_PLAY = getb("VIDEO_PLAY", true);
     c.LANG_CODE = get("LANG_CODE", "en");
     for (const auto& u : util::split_ws(get("COOKIES_URL")))
