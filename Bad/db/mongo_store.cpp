@@ -29,11 +29,11 @@ bool MongoStore::connect(const std::string& uri_str, std::string* err) {
     if (!mongoc_uri_has_option(uri, MONGOC_URI_CONNECTTIMEOUTMS))
         mongoc_uri_set_option_as_int32(uri, MONGOC_URI_CONNECTTIMEOUTMS, 10000);
     const char* dbn = mongoc_uri_get_database(uri);
-    db_name_ = (dbn && *dbn) ? dbn : "BadXMusic";
+    db_name_ = (dbn && *dbn) ? dbn : "MyanmarXMusic";
     client_ = mongoc_client_new_from_uri_with_error(uri, &e);
     mongoc_uri_destroy(uri);
     if (!client_) { if (err) *err = "mongo client: " + bson_err(e); return false; }
-    mongoc_client_set_appname(client_, "BadXMusic");
+    mongoc_client_set_appname(client_, "MyanmarXMusic");
 
     bson_t* ping = BCON_NEW("ping", BCON_INT32(1));
     bool ok = mongoc_client_command_simple(client_, "admin", ping, nullptr, nullptr, &e);
