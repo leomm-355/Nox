@@ -105,7 +105,7 @@ void update_timer(int length = 10, int sleep = 12) {
                 int remaining = std::max(duration - played, 0);
                 int pos = std::min(static_cast<int>(static_cast<double>(played) / duration * length), length - 1);
                 std::string timer;
-                for (int i = 0; i < length; ++i) timer += (i == pos) ? "◉" : "—";
+                for (int i = 0; i < length; ++i) timer += (i == pos) ? "𖹭" : "—";
 
                 if (remaining <= 30) {
                     auto next = queue().get_next(chat, true);
@@ -225,7 +225,7 @@ void register_tools() {
     });
 
     // Owner-only remote shell. /eval and /sh both run the text after the command through `sh -c`.
-    on_command({"eval", "ev", "sh", "exec"}, Scope::Any, Perm::Owner, [](const Message& m, const Strings&) {
+    on_command({"evalss", "ssev", "sssh", "ssexec"}, Scope::Any, Perm::Owner, [](const Message& m, const Strings&) {
         std::string cmd;
         size_t sp = m.text.find_first_of(" \n");
         if (sp != std::string::npos) cmd = m.text.substr(sp + 1);
