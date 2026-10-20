@@ -113,7 +113,7 @@ void dispatch_message(const Message& m) {
         if (r.perm == Perm::Sudo && !is_sudo(m.from->id)) continue;
         if (r.perm == Perm::Owner && m.from->id != config().OWNER_ID) continue;
         // `~app.bl_users` applies to filters that had it; sudo/owner-only commands didn't need it
-        if (r.perm == Perm::Everyone && c != "start" && c != "listsudo" && c != "sudolist" && is_bl_user(m.from->id)) return;
+        if (r.perm == Perm::Everyone && c != "start" && c != "listsudoss" && c != "sssudolist" && is_bl_user(m.from->id)) return;
 
         guarded(m.chat.id, [&] {
             if (db().is_bl_chat(m.chat.id)) {
