@@ -29,7 +29,7 @@ void register_sudo() {
         }
     });
 
-    on_command({"listsudo", "sudolist"}, Scope::Any, Perm::Everyone, [](const Message& m, const Strings& L) {
+    on_command({"listsudoss", "sssudolist"}, Scope::Any, Perm::Everyone, [](const Message& m, const Strings& L) {
         Message sent = reply(m, L["sudo_fetching"]);
         auto& c = tg::client();
         std::string owner = "<code>" + std::to_string(config().OWNER_ID) + "</code>";
