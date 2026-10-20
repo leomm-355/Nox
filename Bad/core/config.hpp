@@ -19,16 +19,16 @@ struct Config {
     std::string BOT_API_URL = "https://api.telegram.org";   // local Bot API server => 2 GB downloads
     std::string API_URL = "https://api.yourdomain.site";   // download API (YouTube -> mp3/mp4); used when API_KEY is set
     std::string API_KEY;
-    std::string SUPPORT_CHANNEL = "https://t.me/PBX_UPDATE";
-    std::string SOURCE_URL = "https://github.com/Badmunda05/NoxBeats/fork";
-    std::string SUPPORT_CHAT = "https://t.me/PBXCHATS";
+    std::string SUPPORT_CHANNEL = "https://t.me/myanmarbot_music";
+    std::string SOURCE_URL = "https://t.me/hanthar999";
+    std::string SUPPORT_CHAT = "https://t.me/myanmar_music_bot2027";
     bool AUTO_LEAVE = false, AUTO_END = false, THUMB_GEN = true, VIDEO_PLAY = true;
     bool YTDLP_UPDATE = true;               // run `yt-dlp -U` once at start
     std::string LANG_CODE = "en";
     std::vector<std::string> COOKIES_URL;
-    std::string DEFAULT_THUMB = "https://te.legra.ph/file/3e40a408286d4eda24191.jpg";
-    std::string PING_IMG = "https://files.catbox.moe/haagg2.png";
-    std::string START_IMG = "https://files.catbox.moe/zvziwk.jpg";
+    std::string DEFAULT_THUMB = "https://files.catbox.moe/onc6xg.jpg";
+    std::string PING_IMG = "https://files.catbox.moe/onc6xg.jpg";
+    std::string START_IMG = "https://files.catbox.moe/onc6xg.jpg";
 
     static Config load();
     // Returns the list of missing required variables (empty = ok).
