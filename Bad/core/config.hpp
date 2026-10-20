@@ -22,7 +22,7 @@ struct Config {
     std::string SUPPORT_CHANNEL = "https://t.me/myanmarbot_music";
     std::string SOURCE_URL = "https://t.me/hanthar999";
     std::string SUPPORT_CHAT = "https://t.me/myanmar_music_bot2027";
-    bool AUTO_LEAVE = false, AUTO_END = false, THUMB_GEN = true, VIDEO_PLAY = true;
+    bool AUTO_LEAVE = false, AUTO_END = false, THUMB_GEN = false, VIDEO_PLAY = true;
     bool YTDLP_UPDATE = true;               // run `yt-dlp -U` once at start
     std::string LANG_CODE = "en";
     std::vector<std::string> COOKIES_URL;
