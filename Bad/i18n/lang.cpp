@@ -54,9 +54,7 @@ const std::string& Strings::operator[](const std::string& k) const {
 }
 
 Language::Language(const std::string& dir) {
-    codes_ = {{"ar", "العربية"}, {"de", "Deutsch"}, {"en", "English"}, {"es", "Español"},
-              {"fr", "Français"}, {"hi", "हिन्दी"}, {"ja", "日本語"}, {"my", "မြန်မာဘာသာ"},
-              {"pa", "ਪੰਜਾਬੀ"}, {"pt", "Português"}, {"ru", "Русский"}, {"tr", "Türkçe"}, {"zh", "中文"}};
+    codes_ = { {"en", "English"}, {"my", "မြန်မာဘာသာ"}};
     namespace fs = std::filesystem;
     std::string names;
     for (const auto& e : fs::directory_iterator(dir)) {
